@@ -1,12 +1,12 @@
 node {
 	stage('Build') {
-		dir ('MavenProject') {
+		dir ('./MavenProject') {
 			sh 'mvn install'
 		}
 	}
 
 	stage('Execute') {
-		dir ('MavenProject/target/classes') {
+		dir ('./MavenProject/target/classes') {
 			sh "java -cp . Main"
 		}
 	}
