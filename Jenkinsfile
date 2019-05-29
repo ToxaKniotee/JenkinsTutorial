@@ -1,7 +1,4 @@
 node {
-   stage('Cloning') {
-      git 'https://github.com/ToxaKniotee/JenkinsTutorial'
-   }
    stage('Build') {
         dir ('MavenProject') {
            sh 'mvn install'
